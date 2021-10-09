@@ -1,0 +1,11 @@
+<img src="{{ heroe.img }}" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">{{ heroe.nombre }}</h5>
+    <p class="card-text">{{ heroe.bio | slice:0:100}}....</p>
+    <div class="d-grid gap-2 col-12 mx-auto">
+        <!-- aqui usamos el evento de verHeroe del componente para redireccionar con un button -->
+        <button (click)="verHeroe()" type="button" class="btn btn-outline-primary ">Ver más...</button>
+        <!-- Tambien podemos usar un "a" y emplear la redireccion de forma más sencilla -->
+        <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary">Ver más...</a> -->
+    </div>
+</div>

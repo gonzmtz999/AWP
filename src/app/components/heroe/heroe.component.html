@@ -1,0 +1,21 @@
+<h1>Heroe</h1>
+<hr>
+<div class="container animated fadeIn fast">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{ heroe.img }}" class="card-img-top" alt="...">
+            <br>
+            <br>
+            <div class="d-grid gap-2">
+                <button (click)="regresar()" type="button" class="btn btn-outline-dark ">Regresar...</button>
+            </div>
+        </div>
+        <div class="col-8">
+            <h5 class="card-title">{{ heroe.nombre }}</h5>
+            <p class="card-text">{{ heroe.bio }}</p>
+            <p class="card-text">{{ heroe.aparicion }}</p>
+            <img *ngIf="heroe.casa=='DC'" src="assets/img/dc-logo.png" alt="DC" class="img-logo">
+            <img *ngIf="heroe.casa=='Marvel'" src="assets/img/marvel-logo.png" alt="Marvel" class="img-logo">
+        </div>
+    </div>
+</div>
